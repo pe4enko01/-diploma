@@ -296,6 +296,21 @@ a.absolute {
 #responseMessage .modal-content.error {
 	color: #2fab6d;
 }
+.slid {
+	min-width: 300px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+.slider-track{
+	margin: 0 auto;
+	width: 77%;
+	overflow: hidden;
+	display: flex;
+
+}
+
+
 .box {
 	display: none;
 }
