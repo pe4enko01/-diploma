@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerPopup */ \"./src/modules/headerPopup.js\");\n/* harmony import */ var _modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mainScroll */ \"./src/modules/mainScroll.js\");\n\n\n\n\n(0,_modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n//# sourceURL=webpack://DIP/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerPopup */ \"./src/modules/headerPopup.js\");\n/* harmony import */ var _modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mainScroll */ \"./src/modules/mainScroll.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n\n\n\n\n\n(0,_modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://DIP/./src/index.js?");
 
 /***/ }),
 
@@ -60,7 +60,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar mainScroll = function mainScroll() {\n  var topMenu = document.querySelector(\".top-menu\");\n  var topMenuList = topMenu.querySelector(\"ul\");\n  var topMenuListLi = topMenuList.querySelectorAll(\"li\");\n  var position;\n  topMenuListLi[0].addEventListener(\"click\", function () {\n    //alert(\"LOL\")\n    function sayHi() {\n      window.scrollBy(0, 10);\n      setTimeout(sayHi, 10);\n    }\n\n    ;\n    sayHi();\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mainScroll);\n\n//# sourceURL=webpack://DIP/./src/modules/mainScroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar mainScroll = function mainScroll() {\n  var topMenu = document.querySelector(\".top-menu\");\n  var topMenuList = topMenu.querySelector(\"ul\");\n  var topMenuListLi = topMenuList.querySelectorAll(\"li\");\n  var up = document.querySelector(\".up\");\n  topMenuListLi[0].addEventListener(\"click\", function () {\n    var scroll = function scroll() {\n      var timiout;\n\n      if (Math.floor(window.pageYOffset) <= 625) {\n        window.scrollBy(0, 11);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) >= 645) {\n        window.scrollBy(0, -11);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) > 625 && Math.floor(window.pageYOffset) < 645) {\n        clearTimeout(timiout);\n      }\n    };\n\n    scroll();\n  });\n  topMenuListLi[1].addEventListener(\"click\", function () {\n    var scroll = function scroll() {\n      var timiout;\n      var offset = 3600;\n\n      if (Math.floor(window.pageYOffset) <= offset - 10) {\n        window.scrollBy(0, 11);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) >= offset + 10) {\n        window.scrollBy(0, -11);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) > offset - 10 && Math.floor(window.pageYOffset) < offset + 10) {\n        clearTimeout(timiout);\n      }\n    };\n\n    scroll();\n  });\n  topMenuListLi[2].addEventListener(\"click\", function () {\n    var scroll = function scroll() {\n      var timiout;\n      var offset = 4300;\n\n      if (Math.floor(window.pageYOffset) <= offset - 10) {\n        window.scrollBy(0, 11);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) >= offset + 10) {\n        window.scrollBy(0, -11);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) > offset - 10 && Math.floor(window.pageYOffset) < offset + 10) {\n        clearTimeout(timiout);\n      }\n    };\n\n    scroll();\n  });\n  up.addEventListener(\"click\", function () {\n    var scroll = function scroll() {\n      var timiout;\n      var offset = 0;\n\n      if (Math.floor(window.pageYOffset) <= offset - 5) {\n        window.scrollBy(0, 15);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) >= offset + 5) {\n        window.scrollBy(0, -30);\n        timiout = setTimeout(scroll, 1);\n      } else if (Math.floor(window.pageYOffset) < offset) {\n        clearTimeout(timiout);\n      }\n    };\n\n    scroll();\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mainScroll);\n\n//# sourceURL=webpack://DIP/./src/modules/mainScroll.js?");
+
+/***/ }),
+
+/***/ "./src/modules/topSlider.js":
+/*!**********************************!*\
+  !*** ./src/modules/topSlider.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  var topSlider = document.querySelector('.top-slider');\n  var slideDiv = topSlider.querySelectorAll(\".head-slider\");\n  slideDiv[0].style.display = \"block\";\n  slideDiv[1].style.display = \"none\";\n  slideDiv[2].style.display = \"none\";\n  var count = 1;\n  setInterval(function () {\n    slideDiv[0].style.display = \"none\";\n    slideDiv[1].style.display = \"none\";\n    slideDiv[2].style.display = \"none\";\n    slideDiv.forEach(function (item, i) {\n      if (i === count) {\n        item.style.display = \"block\";\n      }\n    });\n    count++;\n\n    if (count >= 3) {\n      count = 0;\n    }\n  }, 3000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://DIP/./src/modules/topSlider.js?");
 
 /***/ }),
 
@@ -462,7 +473,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("71250109f7cf50afa384")
+/******/ 		__webpack_require__.h = () => ("572a4722bc4ae01edac5")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
