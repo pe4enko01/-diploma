@@ -298,15 +298,13 @@ a.absolute {
 }
 .slider-container{
 	margin: 0 auto;
-	width: 77.7%;
+	width: 100%;
 	overflow: hidden;
 	
 }
 .slid {
-	min-width: 300px;
+	min-width: 32.73%;
 	margin-right: 10px;
-
-
 }
 .slider-track{
 	display: flex;
