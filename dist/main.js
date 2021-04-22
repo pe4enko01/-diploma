@@ -38,7 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerPopup */ \"./src/modules/headerPopup.js\");\n/* harmony import */ var _modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mainScroll */ \"./src/modules/mainScroll.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n\n\n\n\n\n(0,_modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://DIP/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerPopup */ \"./src/modules/headerPopup.js\");\n/* harmony import */ var _modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mainScroll */ \"./src/modules/mainScroll.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_caruselSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/caruselSlider */ \"./src/modules/caruselSlider.js\");\n\n\n\n\n\n\n(0,_modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_caruselSlider__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack://DIP/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/caruselSlider.js":
+/*!**************************************!*\
+  !*** ./src/modules/caruselSlider.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar caruselSlider = function caruselSlider() {\n  var sliderTrack = document.querySelector(\".slider-track\");\n  var sliderItem = document.querySelectorAll(\".slid\");\n  var prevButton = document.querySelector(\".arrow-left\");\n  var nextButton = document.querySelector(\".arrow-right\");\n  var counter = 2;\n  var size = sliderItem[0].clientWidth + 10;\n  sliderTrack.style.transform = 'translateX(' + -size * counter + 'px)';\n  nextButton.addEventListener(\"click\", function () {\n    if (counter >= sliderItem.length - 3) return;\n    sliderTrack.style.transition = 'transfotm 0.5s , ease-in-out 0.5s';\n    counter++;\n    sliderTrack.style.transform = 'translateX(' + -size * counter + 'px)';\n  });\n  prevButton.addEventListener(\"click\", function () {\n    if (counter <= 1) return;\n    sliderTrack.style.transition = \"transfotm 0.5s , ease-in-out 0.5s\";\n    counter--;\n    sliderTrack.style.transform = 'translateX(' + -size * counter + 'px)';\n  });\n  sliderTrack.addEventListener(\"transitionend\", function () {\n    if (sliderItem[counter].id === \"firstClone\") {\n      sliderTrack.style.transition = \"none\";\n      counter = 2;\n      sliderTrack.style.transform = 'translateX(' + -size * counter + 'px)';\n    }\n\n    ;\n\n    if (sliderItem[counter].id === \"lastClone\") {\n      sliderTrack.style.transition = \"none\";\n      counter = 7;\n      sliderTrack.style.transform = 'translateX(' + -size * counter + 'px)';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (caruselSlider);\n\n//# sourceURL=webpack://DIP/./src/modules/caruselSlider.js?");
 
 /***/ }),
 
@@ -473,7 +484,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("68cfa55a6fabc337053b")
+/******/ 		__webpack_require__.h = () => ("77fa46d6663005356ec2")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
