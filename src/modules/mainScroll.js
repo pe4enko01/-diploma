@@ -38,7 +38,7 @@ const mainScroll = ()=>{
     topMenuListLi[2].addEventListener("click", ()=>{
         let scroll = ()=> {
             let timiout;
-            let offset = 4300;
+            let offset = 3870;
             if( Math.floor(window.pageYOffset) <= offset-10){
                 window.scrollBy(0,11);
                 timiout = setTimeout(scroll, 1);

@@ -303,7 +303,7 @@ a.absolute {
 	
 }
 .slid {
-	min-width: 32.73%;
+	min-width: 32.48%;
 	margin-right: 10px;
 }
 .slider-track{
@@ -408,6 +408,7 @@ a.absolute {
 	vertical-align: middle;
 }
 .header > div {
+	cursor: pointer;
 	display: inline-block;
 }
 .mob-menu-btn {
