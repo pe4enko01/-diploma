@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerPopup */ \"./src/modules/headerPopup.js\");\n/* harmony import */ var _modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mainScroll */ \"./src/modules/mainScroll.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_caruselSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/caruselSlider */ \"./src/modules/caruselSlider.js\");\n/* harmony import */ var _modules_buttonServices__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/buttonServices */ \"./src/modules/buttonServices.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n\n\n\n\n\n\n\n\n(0,_modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_caruselSlider__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_buttonServices__WEBPACK_IMPORTED_MODULE_4__.default)();\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_5__.default)();\n\n//# sourceURL=webpack://DIP/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerPopup */ \"./src/modules/headerPopup.js\");\n/* harmony import */ var _modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mainScroll */ \"./src/modules/mainScroll.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_caruselSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/caruselSlider */ \"./src/modules/caruselSlider.js\");\n/* harmony import */ var _modules_buttonServices__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/buttonServices */ \"./src/modules/buttonServices.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* harmony import */ var _modules_upButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/upButton */ \"./src/modules/upButton.js\");\n\n\n\n\n\n\n\n\n\n(0,_modules_headerPopup__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_mainScroll__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_upButton__WEBPACK_IMPORTED_MODULE_6__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_caruselSlider__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_buttonServices__WEBPACK_IMPORTED_MODULE_4__.default)();\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_5__.default)();\n\n//# sourceURL=webpack://DIP/./src/index.js?");
 
 /***/ }),
 
@@ -105,6 +105,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  var topSlider = document.querySelector('.top-slider');\n  var slideDiv = topSlider.querySelectorAll(\".head-slider\");\n  slideDiv[0].style.display = \"block\";\n  slideDiv[1].style.display = \"none\";\n  slideDiv[2].style.display = \"none\";\n  var count = 1;\n  setInterval(function () {\n    slideDiv[0].style.display = \"none\";\n    slideDiv[1].style.display = \"none\";\n    slideDiv[2].style.display = \"none\";\n    slideDiv.forEach(function (item, i) {\n      if (i === count) {\n        item.style.display = \"block\";\n      }\n    });\n    count++;\n\n    if (count >= 3) {\n      count = 0;\n    }\n  }, 3000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://DIP/./src/modules/topSlider.js?");
+
+/***/ }),
+
+/***/ "./src/modules/upButton.js":
+/*!*********************************!*\
+  !*** ./src/modules/upButton.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar upButton = function upButton() {\n  var up = document.querySelector(\".up\");\n\n  if (window.pageYOffset > 635) {\n    up.style.display = \"block\";\n  } else {\n    up.style.display = \"none\";\n  }\n\n  window.addEventListener('scroll', function () {\n    if (window.pageYOffset > 635) {\n      up.style.display = \"block\";\n    } else {\n      up.style.display = \"none\";\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (upButton);\n\n//# sourceURL=webpack://DIP/./src/modules/upButton.js?");
 
 /***/ }),
 
@@ -506,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("dce36aab9fafb691167e")
+/******/ 		__webpack_require__.h = () => ("4303e229c5cd3556c5f4")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
