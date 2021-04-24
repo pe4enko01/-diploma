@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {\n  var accordeon = document.querySelector(\".accordeon\");\n  var element = document.querySelectorAll(\".element\");\n  var elementContent = accordeon.querySelectorAll(\".element-content\");\n  accordeon.addEventListener(\"click\", function (event) {\n    if (event.target.parentElement.classList.contains('active')) {\n      event.target.parentElement.childNodes[3].style.display = \"none\";\n      event.target.parentElement.classList.remove(\"active\");\n    } else {\n      element.forEach(function (item) {\n        item.classList.remove(\"active\");\n      });\n      elementContent.forEach(function (item) {\n        item.style.display = \"none\";\n      });\n      event.target.parentElement.classList.add(\"active\");\n      event.target.parentElement.childNodes[3].style.display = \"block\";\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://DIP/./src/modules/accordeon.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {\n  var accordeon = document.querySelector(\".accordeon\");\n  var element = document.querySelectorAll(\".element\");\n  var elementContent = accordeon.querySelectorAll(\".element-content\");\n  accordeon.addEventListener(\"click\", function (event) {\n    if (event.target.parentElement.classList.contains('active') && event.target.closest(\".title\")) {\n      event.target.parentElement.childNodes[3].style.display = \"none\";\n      event.target.parentElement.classList.remove(\"active\");\n    } else {\n      element.forEach(function (item) {\n        item.classList.remove(\"active\");\n      });\n      elementContent.forEach(function (item) {\n        item.style.display = \"none\";\n      });\n      event.target.parentElement.classList.add(\"active\");\n      event.target.parentElement.childNodes[3].style.display = \"block\";\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://DIP/./src/modules/accordeon.js?");
 
 /***/ }),
 
@@ -506,7 +506,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("7240c294253fd6ace18b")
+/******/ 		__webpack_require__.h = () => ("a0611c021e5a1c22741c")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

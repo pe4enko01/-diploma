@@ -4,7 +4,7 @@ const accordeon = ()=>{
     const elementContent = accordeon.querySelectorAll(".element-content");
 
     accordeon.addEventListener("click",(event)=>{
-        if(event.target.parentElement.classList.contains('active')){
+        if(event.target.parentElement.classList.contains('active') && event.target.closest(".title")){
             event.target.parentElement.childNodes[3].style.display = "none";
             event.target.parentElement.classList.remove("active");
         }else{
