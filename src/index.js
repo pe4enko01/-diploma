@@ -6,6 +6,8 @@ import caruselSlider from './modules/caruselSlider';
 import buttonServices from './modules/buttonServices';
 import accordeon from './modules/accordeon';
 import upButton from './modules/upButton';
+import sendForm from './modules/sendForm';
+
 
 headerPopup();
 mainScroll();
@@ -14,3 +16,4 @@ topSlider();
 caruselSlider();
 buttonServices();
 accordeon();
+sendForm();
