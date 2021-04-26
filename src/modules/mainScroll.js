@@ -89,7 +89,6 @@ const mainScroll = ()=>{
             }else if (Math.floor(window.pageYOffset) <= offset){
                 clearTimeout(timiout);
                 count3 = false;
-                console.log(count1);
             }
         };
         scroll();
